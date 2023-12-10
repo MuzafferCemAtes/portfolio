@@ -1,0 +1,39 @@
+.section-education {
+  padding: 15rem 0 15rem 0;
+  //border: solid 2px red;
+  //background-color: $color-white;
+}
+
+.section-projects {
+  padding: 7rem 15rem;
+  /*
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-blue, 0.7),
+    rgba($color-blue-cobalt, 0.7)
+  );
+  */
+  background-size: cover;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-blue, 0.8),
+      rgba($color-blue-cobalt, 0.8)
+    ),
+    url(../img/prj_bck.jpg);
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-skills {
+  padding: 7rem 15rem 1rem 15rem;
+  height: 110vh;
+  //background-color: $color-white;
+}

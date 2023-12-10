@@ -1,0 +1,120 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+    transition: all 2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+    overflow: hidden;
+    background-color: $color-white;
+    /*
+    &--front {
+      background-color: red;
+    }
+    */
+
+    &--back {
+      &-1 {
+        color: $color-white-ivory;
+        background-image: linear-gradient(
+          to bottom right,
+          rgba($color-blue, 0.8),
+          rgba($color-blue-cobalt, 0.8)
+        );
+      }
+
+      &-2 {
+        color: $color-white-ivory;
+        background-image: linear-gradient(
+          to bottom right,
+          rgba($color-blue, 0.8),
+          rgba($color-blue-cobalt, 0.8)
+        );
+      }
+
+      &-3 {
+        color: $color-white-ivory;
+        background-image: linear-gradient(
+          to bottom right,
+          rgba($color-blue, 0.8),
+          rgba($color-blue-cobalt, 0.8)
+        );
+      }
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  //FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    &--1 {
+      background-image: url(../img/schools/tobb.png);
+      height: 23rem;
+    }
+    &--2 {
+      background-image: url(../img/schools/itu.png);
+      height: 23rem;
+    }
+    &--3 {
+      height: 23rem;
+      background-image: url(../img/schools/sheridan.png);
+    }
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+
+    &--primary {
+      font-size: 5rem;
+      position: absolute;
+      top: 30rem;
+    }
+
+    &--sub {
+      position: absolute;
+      top: 40rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    font-weight: 500;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 5rem auto;
+      li {
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+    &--wes {
+      height: 15rem;
+      width: auto;
+    }
+  }
+}

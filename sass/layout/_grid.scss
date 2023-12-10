@@ -1,0 +1,215 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  height: 70vh;
+
+  //background-color: red;
+
+  &__java {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  &__pinterest {
+    grid-area: 1 / 5 / 3 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfdbcf;
+    box-shadow: 0px 0px 3px black;
+    &:hover {
+      transform: translateX(1rem);
+    }
+    &:active {
+      box-shadow: 0 0.5rem 1rem black;
+      transform: translateY(0);
+    }
+    &--link {
+      width: 65%;
+      height: auto;
+    }
+    &--logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__git {
+    grid-area: 4 / 1 / 5 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--logo {
+      width: 100%;
+      height: auto;
+    }
+    &--link {
+      width: 60%;
+      height: auto;
+    }
+    box-shadow: 0px 0px 3px black;
+    &:hover {
+      transform: translateX(-1rem);
+    }
+    &:active {
+      box-shadow: 0 0.5rem 1rem black;
+      transform: translateY(0);
+    }
+  }
+
+  &__html {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: #e44d26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 40%;
+      height: auto;
+    }
+  }
+  &__css {
+    grid-area: 2 / 2 / 4 / 3;
+    background-color: #2062af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__javascript {
+    grid-area: 1 / 3 / 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__npm {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__net {
+    //grid-area: 4 / 3 / 5 / 4;
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: #6d429c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  &__mysql {
+    grid-area: 3 / 4 / 4 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 60%;
+      height: auto;
+    }
+  }
+  &__excel {
+    grid-area: 1 / 4 / 2 / 5;
+    background-color: #107c41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 40%;
+      height: auto;
+    }
+  }
+  &__sass {
+    grid-area: 2 / 4 / 3 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  &__mongodb {
+    //grid-area: 3 / 3 / 4 / 4;
+    grid-area: 4 / 3 / 5 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__node {
+    grid-area: 4 / 4 / 5 / 6;
+    background-color: #b2ac88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--logo {
+      width: 40%;
+      height: auto;
+    }
+  }
+}

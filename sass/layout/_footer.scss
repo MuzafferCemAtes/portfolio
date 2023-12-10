@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px grey;
+
+  &__logo {
+    height: 15rem;
+    display: block;
+    margin: 0 auto;
+    //margin-top: 5rem;
+
+    &--2 {
+      height: 5rem;
+      width: auto;
+      display: block;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    justify-content: center;
+    width: 40vh;
+    padding: 2rem 5rem 2rem 5rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    text-decoration: none;
+    color: $color-blue;
+  }
+}
